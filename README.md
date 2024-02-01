@@ -55,8 +55,8 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 
 | Folder      | Number of Files | Size (GB)        |
 |-------------|-----------------|------------------|
-| with_GPS    | TBD             | TBD              |
-| without_GPS | TBD             | TBD              |
+| with_GPS    | *TBD*             | *TBD*              |
+| without_GPS | *TBD*             | *TBD*              |
 
 
 ### ROS Topics
