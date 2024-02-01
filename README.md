@@ -20,9 +20,19 @@ This dataset is designed for evaluating autonomous navigation and crop monitorin
 The dataset is organized by GPS availability and collection date. It contains Rosbag (*.bag) files, providing a comprehensive set of sensor measurements. For detailed information on the folder structure and ROS topics included.
 
 ### Figure 1. Coordinate frames of our robot system (P-AgBot)
-
+<!-- ![tf_image.png](tf_image.png) -->
+<div style="text-align: center;">
+    <a href="tf_image.png" target="_blank">
+        <img src="tf_image.png" alt="Markdown logo" width="50%">
+    </a>
+</div>
 
 ### Figure 2. TF Tree
+
+* [TF Tree](static_transform.txt)
+<div style="text-align: center;">
+    <img src="tf_tree.png" alt="Markdown logo" width="100%">
+</div>
 
 * [Static trasform information](static_transform.txt)
 
