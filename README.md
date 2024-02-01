@@ -1,53 +1,78 @@
 # Purdue ACRE Cornfield Dataset
 
-This dataset is designed for evaluating autonomous navigation and crop monitoring systems in cornfields. It was collected using Purdue-AgBot (P-AgBot) at Purdue University’s [Agronomy Center for Research and Education (ACRE)](https://ag.purdue.edu/department/agry/acre/index.html) during the Summer of 2023.
+This dataset, collected with Purdue-AgBot (P-AgBot) at the [Agronomy Center for Research and Education (ACRE)](https://ag.purdue.edu/department/agry/acre/index.html) during Summer 2023, supports research in autonomous navigation and crop monitoring in cornfields.
+
+<div style="text-align: center;">
+    <a href="ACRE_image.png" target="_blank">
+        <img src="ACRE_image.png" alt="Markdown logo" width="100%">
+    </a>
+</div>
 
 ## Overview
 
-- **Contents**: 3D LiDAR, IMU, RTK GPS, wheel encoder measurements.
-- **Environments**: Cornfields with varying weather conditions and growth stages.
-- **Challenges**: Includes arbitrary occlusions from hanging leaves, and rough terrain.
+- **Sensor Data**: Includes 3D LiDAR, IMU, wheel encoders, and RTK GPS.
+- **Environments**: ACRE cornfields under various weather conditions and growth stages. P-AgBot drove under the canopies in the cornfields.
+- **Challenges**: Collected data in environments which contain hanging leaves and rough terrain.
+
+## Robot Platform and Sensors
+
+- **Unmanned Ground Vehicle (UGV)**: [Clearpath Jackal](https://clearpathrobotics.com/jackal-small-unmanned-ground-vehicle/) (`base_link`)
+- **3D LiDAR**: Two [Velodyne VLP-16](https://velodynelidar.com/products/puck/) units mounted for horizontal (`velodyne1`) and vertical (`velodyne2`) scanning.
+- **IMU**: [Internal IMU](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/calibration.html) in UGV (`imu_link`)
+- **Wheel Encoder**: Internal wheel encoder in UGV
+- **RTK GPS**: [Emlid M2](https://emlid.com/reach/) (`gps_link`)
+
 
 ## Accessing the Dataset
 
-- **Download Dataset**: [Download Link](https://purdue0-my.sharepoint.com/:f:/g/personal/kim3686_purdue_edu/Epm1jo1fP0NDjPju2Hosr5IB2RTKf_Hui_8v6oN-yAAyRg?e=obvB6V)
-<!-- - **Research Paper**: [View Paper](https://journals.sagepub.com/doi/abs/10.1177/02783649231215372)
-- **Supplementary Material**: [Download Here](https://uofi.box.com/s/cns333ty3t04lib5mjnq16tycxokztp2)
-- **Sample Video**: [Watch on YouTube](https://youtu.be/cSIdbHLZzkc) -->
+- **Download the dataset [here](https://purdue0-my.sharepoint.com/:f:/g/personal/kim3686_purdue_edu/Epm1jo1fP0NDjPju2Hosr5IB2RTKf_Hui_8v6oN-yAAyRg?e=obvB6V).**
 
 ## Data Description
 
-The dataset is organized by GPS availability and collection date. It contains Rosbag (*.bag) files, providing a comprehensive set of sensor measurements. For detailed information on the folder structure and ROS topics included.
+Data is sorted by collection date and GPS availability, containing Rosbag (*.bag) files. Each file includes a comprehensive set of sensor measurements.
 
-### Figure 1. Coordinate frames of our robot system (P-AgBot)
-<!-- ![tf_image.png](tf_image.png) -->
+### Figures 
+
+* **Coordinate Frames of P-AgBot**
+
 <div style="text-align: center;">
     <a href="tf_image.png" target="_blank">
         <img src="tf_image.png" alt="Markdown logo" width="50%">
     </a>
 </div>
 
-### Figure 2. TF Tree
+* **TF Tree Visualization**
 
-* [TF Tree](static_transform.txt)
 <div style="text-align: center;">
-    <img src="tf_tree.png" alt="Markdown logo" width="100%">
+    <a href="tf_tree.png" target="_blank">
+        <img src="tf_tree.png" alt="Markdown logo" width="100%">
+    </a>
 </div>
 
-* [Static trasform information](static_transform.txt)
+*For details on sensor transformations, see [static_transform.txt](static_transform.txt)*
 
+### Data Folders
 
-### Table 1. Information about data folders
-
-| Folder      | Number of Files | Folder Size (GB) |
+| Folder      | Number of Files | Size (GB)        |
 |-------------|-----------------|------------------|
 | with_GPS    | 80              | 584              |
 | without_GPS | 2               | 28               |
 
 
-### Table 2. ROS Topics in Rosbag (.bag) files
+### ROS Topics
 
-| ROS Topic   | Description     | ROS message type |
+| Topic              | Description                                          | ROS Message Type            |
+|------------------------|------------------------------------------------------|-----------------------------|
+| `/cmd_vel`             | Robot linear/angular velocity                        | `geometry_msgs/Twist`       |
+| `/gps/fix`             | RTK GPS measurements                                 | `sensor_msgs/NavSatFix`     |
+| `/imu/data`            | Robot IMU data                                       | `sensor_msgs/Imu`           |
+| `/ns1/velodyne_points` | Point cloud from horizontal LiDAR (velodyne1)        | `sensor_msgs/PointCloud2`   |
+| `/ns2/velodyne_points` | Point cloud from vertical LiDAR (velodyne2)          | `sensor_msgs/PointCloud2`   |
+| `/odometry/filtered`   | Filtered odometry from wheel encoders and IMU fusion | `nav_msgs/Odometry`         |
+| `/tf`                  | Sensor coordinate frames relationship                | `tf2_msgs/TFMessage`        |
+
+
+<!-- | ROS Topic   | Description     | ROS message type |
 |-------------|-----------------|------------------|
 | /cmd_vel    | Robot linear/angular velocity              | geometry_msgs/Twist              |
 | /gps/fix | RTK GPS measurements               | sensor_msgs/NavSatFix               |
@@ -56,7 +81,7 @@ The dataset is organized by GPS availability and collection date. It contains Ro
 | /ns2/velodyne_points | Point cloud from a vertical LiDAR               | sensor_msgs/PointCloud2 |
 | /odometry/filtered | Filtered odometry from the fusion of wheel encoders and IMU | nav_msgs/Odometry |
 | /odometry/filtered | Filtered odometry from the fusion of wheel encoders and IMU | nav_msgs/Odometry |
-| /tf | Relationship between sensor coordinate frames | tf2_msgs/TFMessage |
+| /tf | Relationship between sensor coordinate frames | tf2_msgs/TFMessage | -->
 
 <!-- ### Playing SVO Files (Optional)
 
@@ -65,7 +90,7 @@ For higher resolution images and depth quality:
 2. Install the [ZED ROS Wrapper](https://www.stereolabs.com/docs/ros/).
 3. Play SVO files using the ZED ROS Wrapper (instructions in the supplementary material). -->
 
-## Using the Dataset
+<!-- ## Using the Dataset
 
 ### Overview
 
@@ -85,4 +110,4 @@ Follow the instructions in the supplementary material to extract specific data u
 
 ### Sensor Calibration
 
-Download the [sensor_parameters.txt](sensor_parameters.txt) file for calibration information and robot coordinate frames details.
+Download the [sensor_parameters.txt](sensor_parameters.txt) file for calibration information and robot coordinate frames details. -->
