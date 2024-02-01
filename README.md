@@ -21,7 +21,6 @@ The dataset is organized by GPS availability and collection date. It contains Ro
 
 ### Figure 1. Coordinate frames of our robot system (P-AgBot)
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ### Figure 2. TF Tree
 
