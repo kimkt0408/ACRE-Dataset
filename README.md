@@ -75,3 +75,38 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 | `/ns2/velodyne_points` | Point cloud from vertical LiDAR `velodyne2`          | `sensor_msgs/PointCloud2`   |
 | `/odometry/filtered`   | Filtered odometry from wheel encoders and IMU fusion | `nav_msgs/Odometry`         |
 | `/tf`                  | Sensor coordinate frames relationship                | `tf2_msgs/TFMessage`        |
+
+
+
+-------------------
+## Citations
+If you use this dataset for your research, please consider citing our works:
+
+* **Published papers**:
+```
+@inproceedings{deb2023deep,
+  title={Deep Learning-Based Leaf Detection for Robotic Physical Sampling with P-AgBot},
+  author={Deb, Aarya and Kim, Kitae and Cappelleri, David J},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={8291--8297},
+  year={2023},
+  organization={IEEE}
+}
+```
+```
+@article{kim2022p,
+  title={P-AgBot: In-Row \& Under-Canopy Agricultural Robot for Monitoring and Physical Sampling},
+  author={Kim, Kitae and Deb, Aarya and Cappelleri, David J},
+  journal={IEEE Robotics and Automation Letters},
+  volume={7},
+  number={3},
+  pages={7942--7949},
+  year={2022},
+  publisher={IEEE}
+}
+```
+
+* **Paper under review**:
+```
+Kim, K., Deb, A., Cappelleri, D.J., "P-AgSLAM: In-Row and Under-Canopy SLAM for Agricultural Monitoring in Cornfields", IEEE Robotics and Automation Letters, 2024.
+```
