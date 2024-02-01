@@ -3,15 +3,13 @@
 This dataset, collected with Purdue-AgBot (P-AgBot) at the [Agronomy Center for Research and Education (ACRE)](https://ag.purdue.edu/department/agry/acre/index.html) during Summer 2023, supports research in autonomous navigation and crop monitoring in cornfields.
 
 <p align="center">
-    <a href="ACRE_image.png" target="_blank">
-        <img src="ACRE_image.png" alt="Markdown logo" width="100%">
+    <a href="./images/ACRE_image.png" target="_blank">
+        <img src="./images/ACRE_image.png" alt="ACRE image" width="100%">
     </a>
 </p>
 
 <p align="center">
-    <video src="ACRE_video.mp4" autoplay loop muted>
-    Your browser does not support the video tag.
-    </video>
+  <img src="./images/ACRE_video.gif" alt="ACRE video" width="100%">
 </p>
 
 ## Overview
@@ -42,18 +40,18 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 * **Coordinate Frames of P-AgBot**
 
 <p align="center">
-    <a href="tf_image.png" target="_blank">
-        <img src="tf_image.png" alt="Markdown logo" width="50%">
+    <a href="./images/tf_image.png" target="_blank">
+        <img src="./images/tf_image.png" alt="Markdown logo" width="50%">
     </a>
 </p>
 
 * **TF Tree Visualization**
 
-<div style="text-align: center;">
-    <a href="tf_tree.png" target="_blank">
-        <img src="tf_tree.png" alt="Markdown logo" width="100%">
+<p align="center">
+    <a href="./images/tf_tree.png" target="_blank">
+        <img src="./images/tf_tree.png" alt="Markdown logo" width="100%">
     </a>
-</div>
+</p>
 
 *For details on sensor transformations, see [static_transform.txt](static_transform.txt)*
 
@@ -77,44 +75,3 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 | `/ns2/velodyne_points` | Point cloud from vertical LiDAR `velodyne2`          | `sensor_msgs/PointCloud2`   |
 | `/odometry/filtered`   | Filtered odometry from wheel encoders and IMU fusion | `nav_msgs/Odometry`         |
 | `/tf`                  | Sensor coordinate frames relationship                | `tf2_msgs/TFMessage`        |
-
-
-<!-- | ROS Topic   | Description     | ROS message type |
-|-------------|-----------------|------------------|
-| /cmd_vel    | Robot linear/angular velocity              | geometry_msgs/Twist              |
-| /gps/fix | RTK GPS measurements               | sensor_msgs/NavSatFix               |
-| /imu/data | Robot IMU               | sensor_msgs/Imu               |
-| /ns1/velodyne_points | Point cloud from a horizontal LiDAR               | sensor_msgs/PointCloud2               |
-| /ns2/velodyne_points | Point cloud from a vertical LiDAR               | sensor_msgs/PointCloud2 |
-| /odometry/filtered | Filtered odometry from the fusion of wheel encoders and IMU | nav_msgs/Odometry |
-| /odometry/filtered | Filtered odometry from the fusion of wheel encoders and IMU | nav_msgs/Odometry |
-| /tf | Relationship between sensor coordinate frames | tf2_msgs/TFMessage | -->
-
-<!-- ### Playing SVO Files (Optional)
-
-For higher resolution images and depth quality:
-1. Install the [ZED SDK](https://www.stereolabs.com/developers/release/) (requires CUDA).
-2. Install the [ZED ROS Wrapper](https://www.stereolabs.com/docs/ros/).
-3. Play SVO files using the ZED ROS Wrapper (instructions in the supplementary material). -->
-
-<!-- ## Using the Dataset
-
-### Overview
-
-- **Contents**: 3D LiDAR, IMU, RTK GPS, wheel encoder measurements.
-- **Environments**: Cornfields with varying weather conditions and growth stages.
-- **Challenges**: Includes arbitrary occlusions from hanging leaves, and rough terrain.
-
-### Building Custom ROS Messages
-
-To read custom GPS and motor messages:
-1. Download and build the [fpn_msgs](https://uofi.box.com/shared/static/sxfuvw9njpm2e2mbcfncirdxx70kn165.zip) package in your ROS workspace.
-2. Build the package with `catkin_make fpn_msgs` and source your workspace.
-
-### Extracting Data from Rosbag Files
-
-Follow the instructions in the supplementary material to extract specific data using the provided Python script.
-
-### Sensor Calibration
-
-Download the [sensor_parameters.txt](sensor_parameters.txt) file for calibration information and robot coordinate frames details. -->
