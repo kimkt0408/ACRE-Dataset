@@ -35,11 +35,11 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 
 * **Coordinate Frames of P-AgBot**
 
-<div style="text-align: center;">
+<p align="center">
     <a href="tf_image.png" target="_blank">
         <img src="tf_image.png" alt="Markdown logo" width="50%">
     </a>
-</div>
+</p>
 
 * **TF Tree Visualization**
 
@@ -61,13 +61,13 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 
 ### ROS Topics
 
-| Topic              | Description                                          | ROS Message Type            |
+| Topic                  | Description                                          | ROS Message Type            |
 |------------------------|------------------------------------------------------|-----------------------------|
 | `/cmd_vel`             | Robot linear/angular velocity                        | `geometry_msgs/Twist`       |
 | `/gps/fix`             | RTK GPS measurements                                 | `sensor_msgs/NavSatFix`     |
 | `/imu/data`            | Robot IMU data                                       | `sensor_msgs/Imu`           |
-| `/ns1/velodyne_points` | Point cloud from horizontal LiDAR (velodyne1)        | `sensor_msgs/PointCloud2`   |
-| `/ns2/velodyne_points` | Point cloud from vertical LiDAR (velodyne2)          | `sensor_msgs/PointCloud2`   |
+| `/ns1/velodyne_points` | Point cloud from horizontal LiDAR `velodyne1`        | `sensor_msgs/PointCloud2`   |
+| `/ns2/velodyne_points` | Point cloud from vertical LiDAR `velodyne2`          | `sensor_msgs/PointCloud2`   |
 | `/odometry/filtered`   | Filtered odometry from wheel encoders and IMU fusion | `nav_msgs/Odometry`         |
 | `/tf`                  | Sensor coordinate frames relationship                | `tf2_msgs/TFMessage`        |
 
