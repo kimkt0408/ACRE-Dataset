@@ -23,6 +23,11 @@ The dataset is organized by GPS availability and collection date. It contains Ro
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+### Figure 2. TF Tree
+
+* [Static trasform information](static_transform.txt)
+
+
 ### Table 1. Information about data folders
 
 | Folder      | Number of Files | Folder Size (GB) |
