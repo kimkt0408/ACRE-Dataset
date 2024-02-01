@@ -9,7 +9,7 @@ This dataset, collected with Purdue-AgBot (P-AgBot) at the [Agronomy Center for 
 </p>
 
 <p align="center">
-    <video src="acre_dataset.mp4" autoplay loop muted>
+    <video src="ACRE_video.mp4" autoplay loop muted>
     Your browser does not support the video tag.
     </video>
 </p>
