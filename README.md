@@ -51,12 +51,13 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 
 *For details on sensor transformations, see [static_transform.txt](static_transform.txt)*
 
+
 ### Data Folders
 
 | Folder      | Number of Files | Size (GB)        |
 |-------------|-----------------|------------------|
-| with_GPS    | *TBD*             | *TBD*              |
-| without_GPS | *TBD*             | *TBD*              |
+| with_GPS    | 18              | 86.3             |
+| without_GPS | 14              | 51.9             |
 
 
 ### ROS Topics
