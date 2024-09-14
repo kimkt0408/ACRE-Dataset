@@ -83,28 +83,6 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 If you use this dataset for your research, please consider citing our works:
 
 ```
-@inproceedings{deb2023deep,
-  title={Deep Learning-Based Leaf Detection for Robotic Physical Sampling with P-AgBot},
-  author={Deb, Aarya and Kim, Kitae and Cappelleri, David J},
-  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  pages={8291--8297},
-  year={2023},
-  organization={IEEE}
-}
-```
-```
-@article{kim2022p,
-  title={P-AgBot: In-Row \& Under-Canopy Agricultural Robot for Monitoring and Physical Sampling},
-  author={Kim, Kitae and Deb, Aarya and Cappelleri, David J},
-  journal={IEEE Robotics and Automation Letters},
-  volume={7},
-  number={3},
-  pages={7942--7949},
-  year={2022},
-  publisher={IEEE}
-}
-```
-```
 @ARTICLE{10494876,
   author={Kim, Kitae and Deb, Aarya and Cappelleri, David J.},
   journal={IEEE Robotics and Automation Letters}, 
@@ -115,4 +93,28 @@ If you use this dataset for your research, please consider citing our works:
   pages={4982-4989},
   keywords={Feature extraction;Laser radar;Robots;Simultaneous localization and mapping;Three-dimensional displays;Point cloud compression;Monitoring;Agricultural automation;robotics and automation in agriculture and forestry;SLAM},
   doi={10.1109/LRA.2024.3386466}}
+```
+```
+@INPROCEEDINGS{10341516,
+  author={Deb, Aarya and Kim, Kitae and Cappelleri, David J.},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Deep Learning-Based Leaf Detection for Robotic Physical Sampling with P-AgBot}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={8291-8297},
+  keywords={YOLO;Deep learning;Three-dimensional displays;Robot kinematics;Robot vision systems;Crops;Grasping},
+  doi={10.1109/IROS55552.2023.10341516}}
+```
+```
+@ARTICLE{9810180,
+  author={Kim, Kitae and Deb, Aarya and Cappelleri, David J.},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={P-AgBot: In-Row & Under-Canopy Agricultural Robot for Monitoring and Physical Sampling}, 
+  year={2022},
+  volume={7},
+  number={3},
+  pages={7942-7949},
+  keywords={Crops;Robots;Laser radar;Navigation;Monitoring;Three-dimensional displays;Autonomous robots;Field robots;agricultural automation},
+  doi={10.1109/LRA.2022.3187275}}
 ```
