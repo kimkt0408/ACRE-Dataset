@@ -82,7 +82,6 @@ Data is sorted by collection date and GPS availability, containing Rosbag (*.bag
 ## Citations
 If you use this dataset for your research, please consider citing our works:
 
-* **Published papers**:
 ```
 @inproceedings{deb2023deep,
   title={Deep Learning-Based Leaf Detection for Robotic Physical Sampling with P-AgBot},
@@ -105,8 +104,15 @@ If you use this dataset for your research, please consider citing our works:
   publisher={IEEE}
 }
 ```
-
-* **Paper under review**:
 ```
-Kim, K., Deb, A., Cappelleri, D.J., "P-AgSLAM: In-Row and Under-Canopy SLAM for Agricultural Monitoring in Cornfields", IEEE Robotics and Automation Letters, 2024.
+@ARTICLE{10494876,
+  author={Kim, Kitae and Deb, Aarya and Cappelleri, David J.},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={P-AgSLAM: In-Row and Under-Canopy SLAM for Agricultural Monitoring in Cornfields}, 
+  year={2024},
+  volume={9},
+  number={6},
+  pages={4982-4989},
+  keywords={Feature extraction;Laser radar;Robots;Simultaneous localization and mapping;Three-dimensional displays;Point cloud compression;Monitoring;Agricultural automation;robotics and automation in agriculture and forestry;SLAM},
+  doi={10.1109/LRA.2024.3386466}}
 ```
