@@ -1,6 +1,6 @@
 # Purdue ACRE Cornfield Dataset
 
-This dataset, collected with Purdue-AgBot (P-AgBot) at the [Agronomy Center for Research and Education (ACRE)](https://ag.purdue.edu/department/agry/acre/index.html) during Summer 2023, supports research in autonomous navigation and crop monitoring in cornfields.
+This dataset, collected with Purdue-AgBot (P-AgBot) at the [Agronomy Center for Research and Education (ACRE)](https://ag.purdue.edu/department/agry/acre/index.html) every summer, supports research in autonomous navigation and crop monitoring in cornfields.
 
 <p align="center">
     <a href="./images/ACRE_image.png" target="_blank">
